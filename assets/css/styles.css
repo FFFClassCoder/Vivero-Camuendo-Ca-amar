@@ -29,7 +29,9 @@ body {
     font-family: 'Noto Sans', sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background: var(--bg);
+    background: radial-gradient(circle at top right, rgba(255,255,255,0.4), transparent 15%),
+                radial-gradient(circle at left center, rgba(255,255,255,0.18), transparent 16%),
+                var(--bg);
     overflow-x: hidden;
 }
 
@@ -171,7 +173,9 @@ h1, h2, h3, h4, h5, h6, .btn {
 /* Hero */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #2E7D32 0%, #66BB6A 100%);
+    background: radial-gradient(circle at 18% 18%, rgba(255,255,255,0.18), transparent 17%),
+                radial-gradient(circle at 82% 68%, rgba(255,255,255,0.12), transparent 24%),
+                linear-gradient(135deg, #2E7D32 0%, #4F8F3E 48%, #7CC675 100%);
     display: flex;
     align-items: center;
     position: relative;
@@ -181,19 +185,31 @@ h1, h2, h3, h4, h5, h6, .btn {
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.12)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.12)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.45;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="22" cy="22" r="1" fill="rgba(255,255,255,0.12)"/><circle cx="68" cy="68" r="1" fill="rgba(255,255,255,0.12)"/><circle cx="78" cy="18" r="0.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.32;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 52% 48% 60% 40% / 42% 58% 42% 58%;
+    background: rgba(255,255,255,0.12);
+    top: 8%;
+    left: -10%;
+    filter: blur(42px);
+    transform: rotate(-10deg);
+    pointer-events: none;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     color: white;
-    max-width: 600px;
+    max-width: 580px;
     padding: 0 20px;
 }
 
@@ -201,16 +217,18 @@ h1, h2, h3, h4, h5, h6, .btn {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+    text-shadow: 2px 2px 16px rgba(0,0,0,0.28);
 }
 
 .hero-image {
     position: absolute;
-    top: 0;
+    top: 10%;
     right: 0;
-    width: 50%;
-    height: 100%;
+    width: 52%;
+    height: 80%;
     background: url('/assets/img/catalogo/fondo.jpg') center/cover;
+    clip-path: ellipse(58% 52% at 50% 50%);
+    box-shadow: -30px 30px 90px rgba(0,0,0,0.24);
 }
 
 .hero-overlay {
@@ -241,20 +259,24 @@ h1, h2, h3, h4, h5, h6, .btn {
 }
 
 .btn-primary {
-    background: var(--primary);
+    background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05) 50%),
+                linear-gradient(135deg, #2E7D32 0%, #5FAF52 45%, #79C06F 100%);
     color: var(--white);
+    backdrop-filter: blur(4px);
 }
 
 .btn-primary:hover {
-    background: var(--secondary);
+    background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08) 50%),
+                linear-gradient(135deg, #4C9F3F 0%, #70BD5F 30%, #8BD084 100%);
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(46, 125, 50, 0.22);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--tertiary);
+    background: rgba(255,255,255,0.18);
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.3);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
 }
 
 .btn-secondary:hover {
@@ -338,14 +360,27 @@ section {
 
 .category-card {
     display: block;
-    border-radius: 20px;
+    border-radius: 28px;
     overflow: hidden;
-    background: var(--surface);
+    background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(244,250,238,0.96));
     border: 1px solid rgba(109, 76, 65, 0.12);
-    box-shadow: 0 12px 30px rgba(44,44,44,0.08);
+    box-shadow: 0 14px 32px rgba(44,44,44,0.08);
     text-decoration: none;
     color: inherit;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle at 30% 30%, rgba(124,192,117,0.28), transparent 55%);
+    filter: blur(10px);
+    pointer-events: none;
 }
 
 .category-card:hover {
@@ -429,8 +464,9 @@ section {
 
 .nosotros-image img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 36px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    object-fit: cover;
 }
 
 /* Productos */
@@ -446,7 +482,7 @@ section {
 
 .producto-card {
     background: var(--surface);
-    border-radius: 20px;
+    border-radius: 28px;
     overflow: hidden;
     border: 1px solid rgba(109,76,65,0.14);
     box-shadow: 0 10px 40px rgba(44,44,44,0.08);
@@ -463,6 +499,8 @@ section {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    border-radius: 0 0 28px 28px;
+    clip-path: inset(0 round 0 0 28px 28px);
 }
 
 .producto-info {
@@ -492,6 +530,8 @@ section {
     width: 100%;
     height: 220px;
     object-fit: cover;
+    border-radius: 0 0 24px 24px;
+    clip-path: inset(0 round 0 0 24px 24px);
 }
 
 .galeria-card p {
