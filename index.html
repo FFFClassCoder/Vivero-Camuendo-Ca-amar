@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivero Camuendo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#f4f7f5;color:#333;}
+
+header{
+position:fixed;
+top:0;width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+box-shadow:0 2px 15px rgba(0,0,0,0.1);
+z-index:1000;
+}
+
+header img{width:60px;}
+nav a{margin:0 15px;text-decoration:none;color:#2e7d32;font-weight:500;}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e') center/cover;
+display:flex;flex-direction:column;justify-content:center;align-items:center;
+color:white;text-align:center;padding:20px;
+}
+
+.hero h1{font-size:55px;margin-bottom:10px;}
+.hero p{font-size:18px;margin-bottom:20px;}
+
+.btn{
+background:#4caf50;
+padding:14px 30px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+.btn:hover{background:#388e3c;}
+
+section{padding:80px 40px;text-align:center;}
+h2{margin-bottom:30px;color:#2e7d32;font-size:32px;}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+.card:hover{transform:translateY(-8px);}
+
+.card img{width:100%;height:220px;object-fit:cover;}
+.card h3{padding:15px;}
+.card p{padding:0 15px 10px;}
+.card a{
+display:block;margin:10px;padding:10px;
+background:#2e7d32;color:white;text-decoration:none;border-radius:8px;
+}
+
+.benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.benefit{background:white;padding:20px;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+
+.cta{background:#2e7d32;color:white;padding:70px 20px;}
+
+footer{background:#1b5e20;color:white;padding:30px;text-align:center;}
+
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;
+padding:15px;border-radius:50%;font-size:25px;text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png">
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#beneficios">Beneficios</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
+
+<section class="hero" id="inicio">
+<h1>Convierte tu espacio en vida 🌿</h1>
+<p>Plantas reales • Asesoría • Compra rápida por WhatsApp</p>
+<a href="https://wa.me/593XXXXXXXXX" class="btn">Comprar ahora</a>
+</section>
+
+<section id="beneficios">
+<h2>Por qué elegirnos</h2>
+<div class="benefits">
+<div class="benefit">🌱 Plantas sanas y seleccionadas</div>
+<div class="benefit">🚚 Entrega rápida</div>
+<div class="benefit">💬 Asesoría personalizada</div>
+<div class="benefit">🌿 Adaptadas al clima local</div>
+</div>
+</section>
+
+<section id="productos">
+<h2>Catálogo</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+<h3>Plantas Ornamentales</h3>
+<p>Perfectas para interiores</p>
+<a href="https://wa.me/593XXXXXXXXX?text=Quiero plantas ornamentales">Comprar</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1524593166156-312f362cada0">
+<h3>Frutales</h3>
+<p>Para cultivar en casa</p>
+<a href="https://wa.me/593XXXXXXXXX?text=Quiero frutales">Comprar</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509420316987-d27c1d8a6e6f">
+<h3>Suculentas</h3>
+<p>Fáciles de cuidar</p>
+<a href="https://wa.me/593XXXXXXXXX?text=Quiero suculentas">Comprar</a>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Testimonios</h2>
+<p>"Excelente calidad y atención"</p>
+<p>"Mi casa cambió completamente 🌿"</p>
+</section>
+
+<section class="cta">
+<h2>Empieza hoy tu espacio verde</h2>
+<a href="https://wa.me/593XXXXXXXXX" class="btn">Escríbenos ahora</a>
+</section>
+
+<section id="contacto">
+<h2>Contacto</h2>
+<p>📍 Ecuador</p>
+<p>📞 +593 XXX XXX XXX</p>
+</section>
+
+<footer>
+<p>© 2026 Vivero Camuendo</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/593XXXXXXXXX">💬</a>
+
+</body>
+</html>
