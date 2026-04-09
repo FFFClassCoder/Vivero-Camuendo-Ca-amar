@@ -10,14 +10,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="https://wa.me/593958652092" target="_blank">WhatsApp +593 958 652 092</a>
+                <a href="mailto:info@huertosecuador.com" target="_blank">info@huertosecuador.com</a>
+                <a href="https://huertosecuador.com/preguntas" target="_blank">Preguntas</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="https://facebook.com/ViveroChuskuWarmi" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/vivero.chuskuwarmi" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/593958652092" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
+        <div class="container header-container">
+            <div class="header-brand">
                 <div class="logo">
-                    <img src="images/logo.jpeg" alt="Logo Vivero Camuendo" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                    <img src="images/logo.jpeg" alt="Logo Vivero Camuendo">
                     <span>Vivero Camuendo</span>
                 </div>
+                <a href="https://wa.me/593958652092?text=Hola,%20quiero%20información%20sobre%20sus%20plantas" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <div class="header-actions">
+                <form class="search-form" action="https://huertosecuador.com/buscar" method="get">
+                    <input type="search" name="q" placeholder="Buscar plantas, huertos, maceteros..." aria-label="Buscar">
+                    <button type="submit"><i class="fas fa-magnifying-glass"></i></button>
+                </form>
+                <div class="nav-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="nav-container">
                 <ul class="nav-menu">
                     <li><a href="#inicio" class="nav-link">Inicio</a></li>
                     <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
@@ -26,11 +59,6 @@
                     <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
         </nav>
     </header>
@@ -47,6 +75,51 @@
         </div>
         <div class="hero-image">
             <div class="hero-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Catálogo rápido -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Explora nuestro catálogo</h2>
+            <div class="categories-grid">
+                <a href="#productos" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop" alt="Cajones para Huertas">
+                    <div>
+                        <h3>Cajones para Huertas</h3>
+                    </div>
+                </a>
+                <a href="#productos" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=600&h=400&fit=crop" alt="Accesorios de Jardinería">
+                    <div>
+                        <h3>Accesorios de Jardinería</h3>
+                    </div>
+                </a>
+                <a href="#productos" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=600&h=400&fit=crop" alt="Plantas">
+                    <div>
+                        <h3>Plantas</h3>
+                    </div>
+                </a>
+                <a href="#productos" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=400&fit=crop" alt="Maceteros">
+                    <div>
+                        <h3>Maceteros</h3>
+                    </div>
+                </a>
+                <a href="#productos" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1496196614460-48988a57fccf?w=600&h=400&fit=crop" alt="Sustratos">
+                    <div>
+                        <h3>Sustratos</h3>
+                    </div>
+                </a>
+                <a href="#productos" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=600&h=400&fit=crop" alt="Alimentos">
+                    <div>
+                        <h3>Alimentos</h3>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -168,6 +241,35 @@
                         <a href="https://wa.me/0980752799" class="btn btn-primary" target="_blank">Consultar</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de muestras -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2 class="section-title">Galería de Ejemplos</h2>
+            <div class="galeria-grid">
+                <div class="galeria-card"><img src="images/albahaca.jpg" alt="Albahaca" loading="lazy"><p>Albahaca</p></div>
+                <div class="galeria-card"><img src="images/helecho.jpg" alt="Helecho" loading="lazy"><p>Helecho</p></div>
+                <div class="galeria-card"><img src="images/lavanda.jpg" alt="Lavanda" loading="lazy"><p>Lavanda</p></div>
+                <div class="galeria-card"><img src="images/menta.jpg" alt="Menta" loading="lazy"><p>Menta</p></div>
+                <div class="galeria-card"><img src="images/rosa.jpg" alt="Rosa" loading="lazy"><p>Rosa</p></div>
+                <div class="galeria-card"><img src="images/jazmin.jpg" alt="Jazmín" loading="lazy"><p>Jazmín</p></div>
+                <div class="galeria-card"><img src="images/orquidea.jpg" alt="Orquídea" loading="lazy"><p>Orquídea</p></div>
+                <div class="galeria-card"><img src="images/hibisco.jpg" alt="Hibisco" loading="lazy"><p>Hibisco</p></div>
+                <div class="galeria-card"><img src="images/begonia.jpg" alt="Begonia" loading="lazy"><p>Begonia</p></div>
+                <div class="galeria-card"><img src="images/suculenta1.jpg" alt="Suculenta 1" loading="lazy"><p>Suculenta 1</p></div>
+                <div class="galeria-card"><img src="images/suculenta2.jpg" alt="Suculenta 2" loading="lazy"><p>Suculenta 2</p></div>
+                <div class="galeria-card"><img src="images/cactus1.jpg" alt="Cactus 1" loading="lazy"><p>Cactus 1</p></div>
+                <div class="galeria-card"><img src="images/cactus2.jpg" alt="Cactus 2" loading="lazy"><p>Cactus 2</p></div>
+                <div class="galeria-card"><img src="images/aloe.jpg" alt="Aloe" loading="lazy"><p>Aloe</p></div>
+                <div class="galeria-card"><img src="images/palmera.jpg" alt="Palmera" loading="lazy"><p>Palmera</p></div>
+                <div class="galeria-card"><img src="images/helecho2.jpg" alt="Helecho 2" loading="lazy"><p>Helecho 2</p></div>
+                <div class="galeria-card"><img src="images/hortensia.jpg" alt="Hortensia" loading="lazy"><p>Hortensia</p></div>
+                <div class="galeria-card"><img src="images/petunia.jpg" alt="Petunia" loading="lazy"><p>Petunia</p></div>
+                <div class="galeria-card"><img src="images/helecho3.jpg" alt="Helecho 3" loading="lazy"><p>Helecho 3</p></div>
+                <div class="galeria-card"><img src="images/cheflera.jpg" alt="Cheflera" loading="lazy"><p>Cheflera</p></div>
             </div>
         </div>
     </section>
