@@ -226,7 +226,7 @@ h1, h2, h3, h4, h5, h6, .btn {
     right: 0;
     width: 52%;
     height: 80%;
-    background: url('assets/img/catalogo/fondo.jpg') center/cover;
+    background: url('../img/catalogo/fondo.jpg') center/cover;
     clip-path: ellipse(58% 52% at 50% 50%);
     box-shadow: -30px 30px 90px rgba(0,0,0,0.24);
 }
